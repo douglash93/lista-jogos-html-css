@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos</title>
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/modal.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+
+    <div class="container">
+        <div>
+            <ul>
+                <li>
+                    <div>
+                        <img src="https://media-rockstargames-com.akamaized.net/rockstargames-newsite/img/global/games/fob/1280/V.jpg">
+                    </div>
+                    <div class="game-info">
+                        <h2>GTA 5</h2>
+                        <h3>R$ 250,00</h3>
+                    </div>
+                    <span class="icon-remove">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </span>
+                </li>
+                <li>
+                    <div>
+                        <img src="https://image.api.playstation.com/vulcan/img/rnd/202010/2618/w48z6bzefZPrRcJHc7L8SO66.png">
+                    </div>
+                    <div class="game-info">
+                        <h2>The Last Of US Part II</h2>
+                        <h3>R$ 250,00</h3>
+                    </div>
+                    <span class="icon-remove">
+                        <span class="material-symbols-outlined">
+                            delete
+                        </span>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <button id="btnAdd">
+                <span class="material-symbols-outlined">
+                    add_circle
+                </span>
+            </button>
+            <button id="btnImportar">
+                <span class="material-symbols-outlined">
+                    file_upload
+                </span>
+            </button>
+            <button id="btnDownload">
+                <span class="material-symbols-outlined">
+                    download
+                </span>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Modais -->
+    <div class="modal" data-modal="adicionar-jogo">
+        <button class="btn-fechar-modal">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </button>
+        <form>
+            <div class="frm-linha">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome">
+            </div>
+            <div class="frm-linha">
+                <label for="img">Foto</label>
+                <input type="text" id="img">
+            </div>
+            <div class="frm-linha">
+                <label for="preco">Preço</label>
+                <input type="number" step="0.50" id="preco">
+            </div>
+            <div class="frm-linha">
+                <button id="btnSalvar">Salvar</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="modal" data-modal="upload-jogos">
+        <button class="btn-fechar-modal">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </button>
+        <form>
+            <div class="frm-linha">
+                <label for="arquivo">Selecione o arquivo</label>
+                <input type="file" style="display: none;" id="arquivo">
+            </div>
+        </form>
+    </div>
+
+    <div class="modal" data-modal="download-jogos">
+        <button class="btn-fechar-modal">
+            <span class="material-symbols-outlined">
+                close
+            </span>
+        </button>
+        <form>
+            <div class="frm-linha">
+                <label for="nomeArquivo">Nome do arquivo</label>
+                <input type="text" id="nomeArquivo">
+            </div>
+            <div class="frm-linha">
+                <button id="btnFazerDownload">Download</button>
+            </div>
+        </form>
+    </div>
+    <div class="background-modal"></div>
+</body>
+</html>
